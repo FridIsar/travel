@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import React, { useEffect, useState } from 'react';
 import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = 'https://rjpqxbwlcnkylrndqvcb.supabase.co'
-const supabaseKey = "l"//process.env.SUPABASE_KEY
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJqcHF4YndsY25reWxybmRxdmNiIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTExMTQ4MDEsImV4cCI6MjAwNjY5MDgwMX0.jt9JRLIK5SR5Zj7pMiBZnxHKTNHaKpIYk8_TWOhvw8c"//process.env.SUPABASE_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let { data: Positions, error } = await supabase
+        let { data: Positions } = await supabase
           .from('Positions')
           .select('coordinates')
           .order('id', { ascending: false })
