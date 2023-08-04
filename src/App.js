@@ -39,14 +39,12 @@ function App() {
 
   return (
     <div className="App">
-      Last seen {position[0].created_at}<br></br>
-      <a href="https://drive.google.com/drive/folders/1jKcCn31nJrKqbhQh-kzhqYpP7yh1FcNo">Docs</a>
       {position ? (
         <MapContainer center={position[0].coordinates} zoom={13} style={{ height: '100vh' }}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <Marker position={position[0].coordinates} icon={icon}>
           <Popup>
-            Hi :) <br /> I should be around there!
+            Hi :) <br /> I should be around there! <br></br> Last seen: {position[0].created_at}<br></br><a href="https://drive.google.com/drive/folders/1jKcCn31nJrKqbhQh-kzhqYpP7yh1FcNo">Docs</a>
           </Popup>
         </Marker>
       </MapContainer>
