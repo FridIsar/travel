@@ -7,9 +7,6 @@ import L from 'leaflet';
 import iconMarker from 'leaflet/dist/images/marker-icon.png'
 import iconRetina from 'leaflet/dist/images/marker-icon-2x.png'
 import iconShadow from 'leaflet/dist/images/marker-shadow.png'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const icon = L.icon({ 
   iconRetinaUrl:iconRetina, 
@@ -42,18 +39,6 @@ function App() {
 
   return (
     <div className="App">
-          <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">Travel</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="https://drive.google.com/drive/folders/1jKcCn31nJrKqbhQh-kzhqYpP7yh1FcNo">Docs</Nav.Link>
-            <Nav.Link href="#link">Last seen {position[0].created_at}</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
       {position ? (
         <MapContainer center={position[0].coordinates} zoom={13} style={{ height: '100vh' }}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
