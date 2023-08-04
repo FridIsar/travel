@@ -46,12 +46,3 @@ function App() {
 }
 
 export default App;
-
-{/* <MapContainer center={position} zoom={13} style={{ height: '100vh' }}>
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <Marker position={position}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
-        </MapContainer> */}
